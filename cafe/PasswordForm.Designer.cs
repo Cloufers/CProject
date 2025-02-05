@@ -32,7 +32,7 @@
             label1 = new Label();
             okButton = new Button();
             cancelButton = new Button();
-            textBox1 = new TextBox();
+            userTextBox = new TextBox();
             label2 = new Label();
             SuspendLayout();
             // 
@@ -72,12 +72,12 @@
             cancelButton.UseVisualStyleBackColor = true;
             cancelButton.Click += cancelButton_Click;
             // 
-            // textBox1
+            // userTextBox
             // 
-            textBox1.Location = new Point(282, 90);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(182, 23);
-            textBox1.TabIndex = 4;
+            userTextBox.Location = new Point(282, 90);
+            userTextBox.Name = "userTextBox";
+            userTextBox.Size = new Size(182, 23);
+            userTextBox.TabIndex = 4;
             // 
             // label2
             // 
@@ -94,7 +94,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(userTextBox);
             Controls.Add(cancelButton);
             Controls.Add(okButton);
             Controls.Add(label1);
@@ -111,7 +111,7 @@
         private Label label1;
         private Button okButton;
         private Button cancelButton;
-        private TextBox textBox1;
+        private TextBox userTextBox;
         private Label label2;
     }
 }
