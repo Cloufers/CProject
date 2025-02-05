@@ -1,6 +1,6 @@
 ﻿namespace cafe
 {
-    partial class Feedback1
+    partial class Feedback
     {
         /// <summary>
         /// Required designer variable.

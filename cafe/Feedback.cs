@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace cafe
 {
-    public partial class Feedback1 : Form
+    public partial class Feedback : Form
     {
-        public Feedback1()
+        public Feedback()
         {
             InitializeComponent();
             InitializeStarPictureBox();

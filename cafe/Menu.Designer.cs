@@ -56,7 +56,7 @@
             label2.ForeColor = Color.FromArgb(192, 255, 255);
             label2.Location = new Point(207, 111);
             label2.Name = "label2";
-            label2.Size = new Size(118, 28);
+            label2.Size = new Size(116, 28);
             label2.TabIndex = 5;
             label2.Text = "Ваш Аккаунт";
             // 
@@ -139,6 +139,7 @@
             cyberButton3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             cyberButton3.Timer_Effect_1 = 5;
             cyberButton3.Timer_RGB = 300;
+            cyberButton3.Click += cyberButton3_Click;
             // 
             // adminMenuButton
             // 
