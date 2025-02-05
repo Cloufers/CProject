@@ -50,5 +50,11 @@
             Feedback feedback = new Feedback();
             feedback.Show();
         }
+
+        private void cyberButton2_Click(object sender, EventArgs e)
+        {
+            ContacUsWindow contacUs = new ContacUsWindow();
+            contacUs.Show();
+        }
     }
 }

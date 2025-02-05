@@ -99,6 +99,7 @@
             cyberButton2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             cyberButton2.Timer_Effect_1 = 5;
             cyberButton2.Timer_RGB = 300;
+            cyberButton2.Click += cyberButton2_Click;
             // 
             // cyberButton3
             // 
