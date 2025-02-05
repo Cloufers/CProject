@@ -30,7 +30,7 @@
         {
             passwordTextBox = new TextBox();
             label1 = new Label();
-            textBox1 = new TextBox();
+            userTextBox = new TextBox();
             label2 = new Label();
             foxBigLabel1 = new ReaLTaiizor.Controls.FoxBigLabel();
             cyberButton1 = new ReaLTaiizor.Controls.CyberButton();
@@ -57,13 +57,13 @@
             label1.TabIndex = 1;
             label1.Text = "Введите логин";
             // 
-            // textBox1
+            // userTextBox
             // 
-            textBox1.BackColor = Color.SeaShell;
-            textBox1.Location = new Point(93, 147);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(164, 23);
-            textBox1.TabIndex = 4;
+            userTextBox.BackColor = Color.SeaShell;
+            userTextBox.Location = new Point(93, 147);
+            userTextBox.Name = "userTextBox";
+            userTextBox.Size = new Size(164, 23);
+            userTextBox.TabIndex = 4;
             // 
             // label2
             // 
@@ -207,7 +207,7 @@
             Controls.Add(cyberButton1);
             Controls.Add(foxBigLabel1);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(userTextBox);
             Controls.Add(label1);
             Controls.Add(passwordTextBox);
             MaximumSize = new Size(370, 470);
@@ -222,7 +222,7 @@
 
         private TextBox passwordTextBox;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox userTextBox;
         private Label label2;
         private ReaLTaiizor.Controls.FoxBigLabel foxBigLabel1;
         private ReaLTaiizor.Controls.CyberButton cyberButton1;
