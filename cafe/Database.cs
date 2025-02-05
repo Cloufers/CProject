@@ -151,7 +151,7 @@ namespace cafe
                 return sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
             }
         }
-   
+
         public void AddAdmin(string username, string password, string role)
         {
             try
@@ -159,11 +159,7 @@ namespace cafe
                 using (var conn = new NpgsqlConnection(_connectionString))
                 {
                     conn.Open();
-
-                    // Генерация хэша пароля
                     var passwordHash = GeneratePasswordHash(password);
-
-                    // Вставка администратора в базу данных
                     var query = "INSERT INTO employees (username, password_hash, role) VALUES (@username, @password_hash, @role);";
                     using (var cmd = new NpgsqlCommand(query, conn))
                     {
@@ -187,19 +183,14 @@ namespace cafe
                 using (var conn = new NpgsqlConnection(_connectionString))
                 {
                     conn.Open();
-
-                    // Генерация хэша для введенного пароля
                     var passwordHash = GeneratePasswordHash(password);
-
-                    // Проверка существования пользователя с указанным username и password_hash
                     var query = "SELECT role FROM employees WHERE username = @username AND password_hash = @password_hash;";
                     using (var cmd = new NpgsqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("username", username);
                         cmd.Parameters.AddWithValue("password_hash", passwordHash);
-
                         var result = cmd.ExecuteScalar();
-                        return result != null && result.ToString() == "admin"; // Проверяем роль
+                        return result != null; // Проверяем, что пользователь найден
                     }
                 }
             }
@@ -294,6 +285,32 @@ namespace cafe
             {
                 Console.WriteLine("Ошибка при отмене резервации: " + ex.Message);
                 return false;
+            }
+        }
+
+        public int ExecuteNonQuery(string query, NpgsqlParameter[] parameters)
+        {
+            using (var conn = new NpgsqlConnection(_connectionString))
+            {
+                conn.Open();
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddRange(parameters);
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public object ExecuteScalar(string query, NpgsqlParameter[] parameters)
+        {
+            using (var conn = new NpgsqlConnection(_connectionString))
+            {
+                conn.Open();
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddRange(parameters);
+                    return cmd.ExecuteScalar();
+                }
             }
         }
     }
