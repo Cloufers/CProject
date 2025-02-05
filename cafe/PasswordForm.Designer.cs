@@ -32,11 +32,13 @@
             label1 = new Label();
             okButton = new Button();
             cancelButton = new Button();
+            textBox1 = new TextBox();
+            label2 = new Label();
             SuspendLayout();
             // 
             // passwordTextBox
             // 
-            passwordTextBox.Location = new Point(282, 181);
+            passwordTextBox.Location = new Point(282, 180);
             passwordTextBox.Name = "passwordTextBox";
             passwordTextBox.Size = new Size(182, 23);
             passwordTextBox.TabIndex = 0;
@@ -44,11 +46,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(282, 138);
+            label1.Location = new Point(282, 50);
             label1.Name = "label1";
-            label1.Size = new Size(93, 15);
+            label1.Size = new Size(86, 15);
             label1.TabIndex = 1;
-            label1.Text = "Введите пароль";
+            label1.Text = "Введите логин";
             // 
             // okButton
             // 
@@ -70,11 +72,29 @@
             cancelButton.UseVisualStyleBackColor = true;
             cancelButton.Click += cancelButton_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(282, 90);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(182, 23);
+            textBox1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(282, 141);
+            label2.Name = "label2";
+            label2.Size = new Size(93, 15);
+            label2.TabIndex = 5;
+            label2.Text = "Введите пароль";
+            // 
             // PasswordForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
+            Controls.Add(textBox1);
             Controls.Add(cancelButton);
             Controls.Add(okButton);
             Controls.Add(label1);
@@ -91,5 +111,7 @@
         private Label label1;
         private Button okButton;
         private Button cancelButton;
+        private TextBox textBox1;
+        private Label label2;
     }
 }
