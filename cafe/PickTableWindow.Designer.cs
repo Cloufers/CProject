@@ -223,7 +223,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.BackgroundTables;
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(606, 765);
+            ClientSize = new Size(614, 741);
             Controls.Add(comboBoxTime);
             Controls.Add(dateTimePicker1);
             Controls.Add(middleTable9);
@@ -247,6 +247,8 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
+            MaximumSize = new Size(630, 780);
+            MinimumSize = new Size(630, 726);
             Name = "PickTableWindow";
             Text = "KlodMone";
             ResumeLayout(false);
