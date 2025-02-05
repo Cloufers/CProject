@@ -29,7 +29,7 @@
                 {
                     string username = "admin"; // Предполагаем, что имя пользователя всегда "admin"
                     string enteredPassword = passwordForm.EnteredPassword;
-                    string connectionString = "Host=localhost;User ID=postgres;Password=1234;Database=Business";
+                    string connectionString = "Host=ep-fragrant-shadow-a2mncv4x-pooler.eu-central-1.aws.neon.tech;Database=neondb;Username=neondb_owner;Password=npg_DXn7qEayl1Yz";
 
                     Database db = new Database(connectionString);
                     if (db.AuthenticateUser(username, enteredPassword))
