@@ -8,12 +8,10 @@
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void bookTableMenu_Click(object sender, EventArgs e)
         {
             PickTableWindow form3Tables = new PickTableWindow();
             form3Tables.Show();
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -22,8 +20,7 @@
             form2.Show();
             Hide();
         }
-
-        private void adminButton_Click(object sender, EventArgs e)
+        private void adminMenuButton_Click(object sender, EventArgs e)
         {
             using (PasswordForm passwordForm = new PasswordForm())
             {
@@ -46,5 +43,7 @@
                 }
             }
         }
+       
+
     }
 }

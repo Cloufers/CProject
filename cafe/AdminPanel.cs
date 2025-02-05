@@ -20,7 +20,7 @@
 
         }
 
-        private void buttonViewReservationForToday_Click(object sender, EventArgs e)
+        private void nightbuttonViewReservationForToday_Click(object sender, EventArgs e)
         {
             LoadReservationsForDate(DateTime.Today);
         }
@@ -39,9 +39,9 @@
             }
         }
 
-        private void buttonViewSelectedDateReservations_Click(object sender, EventArgs e)
+        private void nightbuttonViewSelectedDateReservations_Click(object sender, EventArgs e)
         {
-            DateTime selectedDate = dateTimePicker.Value.Date; // Получаем выбранную дату
+            DateTime selectedDate = poisondateTimePicker.Value.Date; // Получаем выбранную дату
             LoadReservationsForDate(selectedDate);
         }
 
@@ -100,5 +100,7 @@
                 MessageBox.Show("Ошибка при отмене резервации: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
     }
 }

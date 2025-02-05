@@ -10,7 +10,7 @@
             InitializeComponent();
         }
 
-        private void okButton_Click(object sender, EventArgs e)
+        private void cyberButton1_Click(object sender, EventArgs e)
         {
             EnteredUsername = userTextBox.Text;
             EnteredPassword = passwordTextBox.Text;
@@ -18,10 +18,17 @@
             Close();
         }
 
-        private void cancelButton_Click(object sender, EventArgs e)
+        private void cyberButton2_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             Close();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
