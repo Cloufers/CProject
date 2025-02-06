@@ -251,20 +251,96 @@ namespace cafe
                 using (var conn = new NpgsqlConnection(_connectionString))
                 {
                     conn.Open();
-                    var query = "UPDATE Reservations SET Status = 'завершена' WHERE ID = @id;";
-                    using (var cmd = new NpgsqlCommand(query, conn))
+
+                    // Шаг 1: Получаем данные о бронировании
+                    var queryGetReservation = @"
+                SELECT r.ClientID, r.TableID, r.ReservationDateTime, r.Duration
+                FROM Reservations r
+                WHERE r.ID = @id;";
+                    int clientId, tableId;
+                    DateTime reservationDateTime;
+                    TimeSpan duration;
+
+                    using (var cmdGet = new NpgsqlCommand(queryGetReservation, conn))
                     {
-                        cmd.Parameters.AddWithValue("id", reservationId);
-                        return cmd.ExecuteNonQuery() > 0;
+                        cmdGet.Parameters.AddWithValue("id", reservationId);
+                        using (var reader = cmdGet.ExecuteReader())
+                        {
+                            if (!reader.Read())
+                            {
+                                Logger.LogError($"Бронирование с ID {reservationId} не найдено.");
+                                return false; // Бронирование не найдено
+                            }
+
+                            clientId = reader.GetInt32(0);
+                            tableId = reader.GetInt32(1);
+                            reservationDateTime = reader.GetDateTime(2);
+                            duration = reader.GetTimeSpan(3);
+
+                            Logger.LogInfo($"Найдено бронирование: ClientID={clientId}, TableID={tableId}, ReservationDateTime={reservationDateTime}, Duration={duration}");
+                        } // reader закрыт здесь
                     }
+
+                    // Шаг 2: Проверяем существование клиента
+                    var queryCheckClient = "SELECT COUNT(*) FROM clients WHERE id = @clientId;";
+                    using (var cmdCheckClient = new NpgsqlCommand(queryCheckClient, conn))
+                    {
+                        cmdCheckClient.Parameters.AddWithValue("clientId", clientId);
+                        int clientCount = Convert.ToInt32(cmdCheckClient.ExecuteScalar());
+                        if (clientCount == 0)
+                        {
+                            Logger.LogError($"Клиент с ID {clientId} не найден.");
+                            return false; // Клиент не найден
+                        }
+                    }
+
+                    // Шаг 3: Проверяем существование столика
+                    var queryCheckTable = "SELECT COUNT(*) FROM tables WHERE id = @tableId;";
+                    using (var cmdCheckTable = new NpgsqlCommand(queryCheckTable, conn))
+                    {
+                        cmdCheckTable.Parameters.AddWithValue("tableId", tableId);
+                        int tableCount = Convert.ToInt32(cmdCheckTable.ExecuteScalar());
+                        if (tableCount == 0)
+                        {
+                            Logger.LogError($"Столик с ID {tableId} не найден.");
+                            return false; // Столик не найден
+                        }
+                    }
+
+                    // Шаг 4: Добавляем запись в successfulReservations
+                    var queryInsert = @"
+                INSERT INTO successfulReservations (client_id, table_id, reservation_datetime, duration)
+                VALUES (@clientId, @tableId, @reservationDateTime, @duration);";
+                    using (var cmdInsert = new NpgsqlCommand(queryInsert, conn))
+                    {
+                        cmdInsert.Parameters.AddWithValue("clientId", clientId);
+                        cmdInsert.Parameters.AddWithValue("tableId", tableId);
+                        cmdInsert.Parameters.AddWithValue("reservationDateTime", reservationDateTime);
+                        cmdInsert.Parameters.AddWithValue("duration", duration);
+                        cmdInsert.ExecuteNonQuery();
+                        Logger.LogInfo("Запись успешно добавлена в successfulReservations.");
+                    }
+
+                    // Шаг 5: Удаляем запись из Reservations
+                    var queryDelete = "DELETE FROM Reservations WHERE ID = @id;";
+                    using (var cmdDelete = new NpgsqlCommand(queryDelete, conn))
+                    {
+                        cmdDelete.Parameters.AddWithValue("id", reservationId);
+                        cmdDelete.ExecuteNonQuery();
+                        Logger.LogInfo("Запись успешно удалена из Reservations.");
+                    }
+
+                    return true;
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Ошибка при завершении резервации: " + ex.Message);
+                Logger.LogError("Ошибка при завершении резервации: " + ex.Message);
+                Logger.LogError("Стек вызовов: " + ex.StackTrace);
                 return false;
             }
         }
+
 
         public bool CancelReservation(int reservationId)
         {

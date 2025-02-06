@@ -54,7 +54,6 @@
             }
 
             int reservationId = Convert.ToInt32(dataGridViewReservations.SelectedRows[0].Cells["ID"].Value);
-
             try
             {
                 if (_database.CompleteReservation(reservationId))
@@ -69,6 +68,8 @@
             }
             catch (Exception ex)
             {
+                Logger.LogError("Ошибка при завершении резервации: " + ex.Message);
+                Logger.LogError("Стек вызовов: " + ex.StackTrace);
                 MessageBox.Show("Ошибка при завершении резервации: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
