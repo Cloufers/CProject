@@ -49,11 +49,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe Print", 14.25F);
+            label1.Font = new Font("Segoe Print", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label1.ForeColor = Color.FromArgb(0, 64, 64);
             label1.Location = new Point(99, 111);
             label1.Name = "label1";
-            label1.Size = new Size(164, 33);
+            label1.Size = new Size(163, 33);
             label1.TabIndex = 1;
             label1.Text = "Введите логин";
             // 
@@ -68,11 +68,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe Print", 14.25F);
+            label2.Font = new Font("Segoe Print", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label2.ForeColor = Color.FromArgb(0, 64, 64);
             label2.Location = new Point(93, 183);
             label2.Name = "label2";
-            label2.Size = new Size(178, 33);
+            label2.Size = new Size(177, 33);
             label2.TabIndex = 5;
             label2.Text = "Введите пароль";
             label2.Click += label2_Click;
@@ -112,7 +112,7 @@
             cyberButton1.Effect_2 = true;
             cyberButton1.Effect_2_ColorBackground = Color.White;
             cyberButton1.Effect_2_Transparency = 20;
-            cyberButton1.Font = new Font("Segoe Print", 14.25F);
+            cyberButton1.Font = new Font("Segoe Print", 14.25F, FontStyle.Bold);
             cyberButton1.ForeColor = Color.FromArgb(192, 255, 255);
             cyberButton1.Lighting = false;
             cyberButton1.LinearGradient_Background = false;
@@ -153,7 +153,7 @@
             cyberButton2.Effect_2 = true;
             cyberButton2.Effect_2_ColorBackground = Color.White;
             cyberButton2.Effect_2_Transparency = 20;
-            cyberButton2.Font = new Font("Segoe Print", 14.25F);
+            cyberButton2.Font = new Font("Segoe Print", 14.25F, FontStyle.Bold);
             cyberButton2.ForeColor = Color.FromArgb(192, 255, 255);
             cyberButton2.Lighting = false;
             cyberButton2.LinearGradient_Background = false;

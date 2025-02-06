@@ -62,11 +62,9 @@ namespace cafe
             return bitmap;
         }
 
-        
-
-        private void button1_Click(object sender, EventArgs e)
+        private void cyberButtonFeedback_Click(object sender, EventArgs e)
         {
-            string review = textBox1.Text;
+            string review = cyberTextBoxFeedback.Text;
             MessageBox.Show($"Отзыв: {review}\nОценка: {selectedStars} ", "Отправлено");
         }
     }
