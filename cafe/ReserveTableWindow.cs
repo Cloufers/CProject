@@ -66,7 +66,7 @@ namespace cafe
                 DateTime reservationDateTime = _selectedDate.Date + _selectedTime;
 
                 // Добавляем бронирование в базу данных
-                bool success = _database.AddReservation(name, phone, "example@email.com", reservationDateTime, _tableID, numberOfPeople);
+                bool success = _database.AddReservation(name, phone, "-", reservationDateTime, _tableID, numberOfPeople);
                 if (success)
                 {
                     MessageBox.Show($"Бронирование на {numberOfPeople} человек(а) на {_selectedDate.ToShortDateString()} в {_selectedTime.ToString(@"hh\:mm")} успешно создано.");
