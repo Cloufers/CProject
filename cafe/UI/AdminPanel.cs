@@ -1,4 +1,7 @@
-﻿namespace cafe
+﻿using cafe.Data;
+using cafe.Logging;
+
+namespace cafe
 {
     public partial class AdminPanel : Form
     {

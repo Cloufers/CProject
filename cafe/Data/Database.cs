@@ -1,8 +1,10 @@
-﻿using Npgsql;
+﻿using cafe.Core;
+using cafe.Logging;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 
-namespace cafe
+namespace cafe.Data
 {
     public class Database
     {
@@ -27,8 +29,8 @@ namespace cafe
                     using (var cmd = new NpgsqlCommand(insertClientQuery, conn))
                     {
                         cmd.Parameters.AddWithValue("name", name);
-                        cmd.Parameters.AddWithValue("phone", string.IsNullOrEmpty(phone) ? (object)DBNull.Value : phone);
-                        cmd.Parameters.AddWithValue("email", string.IsNullOrEmpty(email) ? (object)DBNull.Value : email);
+                        cmd.Parameters.AddWithValue("phone", string.IsNullOrEmpty(phone) ? DBNull.Value : phone);
+                        cmd.Parameters.AddWithValue("email", string.IsNullOrEmpty(email) ? DBNull.Value : email);
 
                         var clientID = (int)cmd.ExecuteScalar(); // Получаем ID добавленного клиента
 

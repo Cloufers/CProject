@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace cafe;
+namespace cafe.Logging;
 
 public static class Logger
 {

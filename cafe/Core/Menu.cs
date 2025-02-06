@@ -1,4 +1,6 @@
-﻿namespace cafe
+﻿using cafe.Data;
+
+namespace cafe
 {
     public partial class Menu : Form
     {
