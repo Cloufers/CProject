@@ -42,16 +42,17 @@
             // dataGridViewReservations
             // 
             dataGridViewReservations.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewReservations.Location = new Point(396, 75);
+            dataGridViewReservations.Location = new Point(0, 1);
             dataGridViewReservations.Name = "dataGridViewReservations";
-            dataGridViewReservations.Size = new Size(380, 215);
+            dataGridViewReservations.Size = new Size(832, 215);
             dataGridViewReservations.TabIndex = 0;
             // 
             // buttonCompleteReservation
             // 
             buttonCompleteReservation.BackColor = Color.LightGreen;
-            buttonCompleteReservation.Font = new Font("Comic Sans MS", 12F);
-            buttonCompleteReservation.Location = new Point(396, 320);
+            buttonCompleteReservation.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold);
+            buttonCompleteReservation.ForeColor = SystemColors.ControlText;
+            buttonCompleteReservation.Location = new Point(444, 256);
             buttonCompleteReservation.Name = "buttonCompleteReservation";
             buttonCompleteReservation.Size = new Size(162, 37);
             buttonCompleteReservation.TabIndex = 4;
@@ -62,10 +63,11 @@
             // buttonCancelReservation
             // 
             buttonCancelReservation.BackColor = Color.Brown;
-            buttonCancelReservation.Font = new Font("Comic Sans MS", 12F);
-            buttonCancelReservation.Location = new Point(629, 320);
+            buttonCancelReservation.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold);
+            buttonCancelReservation.ForeColor = SystemColors.ControlText;
+            buttonCancelReservation.Location = new Point(661, 256);
             buttonCancelReservation.Name = "buttonCancelReservation";
-            buttonCancelReservation.Size = new Size(147, 37);
+            buttonCancelReservation.Size = new Size(161, 37);
             buttonCancelReservation.TabIndex = 5;
             buttonCancelReservation.Text = "Отменить бронь";
             buttonCancelReservation.UseVisualStyleBackColor = false;
@@ -83,12 +85,12 @@
             // 
             nightbuttonViewReservationForToday.BackColor = Color.Transparent;
             nightbuttonViewReservationForToday.DialogResult = DialogResult.None;
-            nightbuttonViewReservationForToday.Font = new Font("Comic Sans MS", 12F);
+            nightbuttonViewReservationForToday.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Bold);
             nightbuttonViewReservationForToday.ForeColor = Color.FromArgb(192, 255, 255);
-            nightbuttonViewReservationForToday.HoverBackColor = Color.Teal;
+            nightbuttonViewReservationForToday.HoverBackColor = Color.DarkSlateGray;
             nightbuttonViewReservationForToday.HoverForeColor = Color.White;
             nightbuttonViewReservationForToday.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-            nightbuttonViewReservationForToday.Location = new Point(12, 115);
+            nightbuttonViewReservationForToday.Location = new Point(0, 314);
             nightbuttonViewReservationForToday.MinimumSize = new Size(144, 47);
             nightbuttonViewReservationForToday.Name = "nightbuttonViewReservationForToday";
             nightbuttonViewReservationForToday.NormalBackColor = Color.FromArgb(192, 255, 255);
@@ -106,12 +108,12 @@
             // 
             nightbuttonViewSelectedDateReservations.BackColor = Color.Transparent;
             nightbuttonViewSelectedDateReservations.DialogResult = DialogResult.None;
-            nightbuttonViewSelectedDateReservations.Font = new Font("Comic Sans MS", 12F);
+            nightbuttonViewSelectedDateReservations.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Bold);
             nightbuttonViewSelectedDateReservations.ForeColor = Color.FromArgb(192, 255, 255);
-            nightbuttonViewSelectedDateReservations.HoverBackColor = Color.Teal;
+            nightbuttonViewSelectedDateReservations.HoverBackColor = Color.DarkSlateGray;
             nightbuttonViewSelectedDateReservations.HoverForeColor = Color.White;
             nightbuttonViewSelectedDateReservations.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            nightbuttonViewSelectedDateReservations.Location = new Point(12, 296);
+            nightbuttonViewSelectedDateReservations.Location = new Point(0, 232);
             nightbuttonViewSelectedDateReservations.MinimumSize = new Size(144, 47);
             nightbuttonViewSelectedDateReservations.Name = "nightbuttonViewSelectedDateReservations";
             nightbuttonViewSelectedDateReservations.NormalBackColor = Color.FromArgb(192, 255, 255);
@@ -138,7 +140,7 @@
             parrotPictureBox1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
             parrotPictureBox1.IsElipse = false;
             parrotPictureBox1.IsParallax = false;
-            parrotPictureBox1.Location = new Point(12, 12);
+            parrotPictureBox1.Location = new Point(737, 355);
             parrotPictureBox1.Name = "parrotPictureBox1";
             parrotPictureBox1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
             parrotPictureBox1.Size = new Size(85, 81);
@@ -149,7 +151,7 @@
             // 
             // poisondateTimePicker
             // 
-            poisondateTimePicker.Location = new Point(12, 222);
+            poisondateTimePicker.Location = new Point(0, 398);
             poisondateTimePicker.MinimumSize = new Size(0, 29);
             poisondateTimePicker.Name = "poisondateTimePicker";
             poisondateTimePicker.Size = new Size(266, 29);
@@ -160,7 +162,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 64, 64);
-            ClientSize = new Size(804, 461);
+            ClientSize = new Size(834, 461);
             Controls.Add(poisondateTimePicker);
             Controls.Add(parrotPictureBox1);
             Controls.Add(nightbuttonViewSelectedDateReservations);
@@ -169,7 +171,7 @@
             Controls.Add(buttonCancelReservation);
             Controls.Add(buttonCompleteReservation);
             Controls.Add(dataGridViewReservations);
-            MaximumSize = new Size(820, 500);
+            MaximumSize = new Size(850, 500);
             MinimumSize = new Size(820, 500);
             Name = "AdminPanel";
             Text = "AdminWindow";

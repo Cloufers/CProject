@@ -52,7 +52,7 @@
             // middleTable1
             // 
             middleTable1.BackColor = Color.Green;
-            middleTable1.Location = new Point(331, 114);
+            middleTable1.Location = new Point(322, 101);
             middleTable1.Name = "middleTable1";
             middleTable1.Size = new Size(33, 34);
             middleTable1.TabIndex = 0;
@@ -61,7 +61,7 @@
             // sideTable1
             // 
             sideTable1.BackColor = Color.Green;
-            sideTable1.Location = new Point(103, 125);
+            sideTable1.Location = new Point(117, 113);
             sideTable1.Name = "sideTable1";
             sideTable1.Size = new Size(32, 58);
             sideTable1.TabIndex = 1;
@@ -70,7 +70,7 @@
             // middleTable2
             // 
             middleTable2.BackColor = Color.Green;
-            middleTable2.Location = new Point(256, 175);
+            middleTable2.Location = new Point(256, 160);
             middleTable2.Name = "middleTable2";
             middleTable2.Size = new Size(33, 34);
             middleTable2.TabIndex = 2;
@@ -79,7 +79,7 @@
             // middleTable3
             // 
             middleTable3.BackColor = Color.Green;
-            middleTable3.Location = new Point(296, 242);
+            middleTable3.Location = new Point(291, 224);
             middleTable3.Name = "middleTable3";
             middleTable3.Size = new Size(33, 34);
             middleTable3.TabIndex = 3;
@@ -88,7 +88,7 @@
             // middleTable4
             // 
             middleTable4.BackColor = Color.Green;
-            middleTable4.Location = new Point(256, 306);
+            middleTable4.Location = new Point(256, 281);
             middleTable4.Name = "middleTable4";
             middleTable4.Size = new Size(33, 34);
             middleTable4.TabIndex = 4;
@@ -97,7 +97,7 @@
             // middleTable5
             // 
             middleTable5.BackColor = Color.Green;
-            middleTable5.Location = new Point(334, 376);
+            middleTable5.Location = new Point(328, 342);
             middleTable5.Name = "middleTable5";
             middleTable5.Size = new Size(33, 34);
             middleTable5.TabIndex = 5;
@@ -106,7 +106,7 @@
             // middleTable6
             // 
             middleTable6.BackColor = Color.Green;
-            middleTable6.Location = new Point(242, 479);
+            middleTable6.Location = new Point(242, 440);
             middleTable6.Name = "middleTable6";
             middleTable6.Size = new Size(33, 34);
             middleTable6.TabIndex = 6;
@@ -115,7 +115,7 @@
             // middleTable8
             // 
             middleTable8.BackColor = Color.Green;
-            middleTable8.Location = new Point(243, 568);
+            middleTable8.Location = new Point(242, 519);
             middleTable8.Name = "middleTable8";
             middleTable8.Size = new Size(33, 34);
             middleTable8.TabIndex = 7;
@@ -124,34 +124,34 @@
             // angledTable1
             // 
             angledTable1.BackColor = Color.Green;
-            angledTable1.Location = new Point(455, 520);
+            angledTable1.Location = new Point(434, 473);
             angledTable1.Name = "angledTable1";
-            angledTable1.Size = new Size(30, 24);
+            angledTable1.Size = new Size(37, 28);
             angledTable1.TabIndex = 8;
             angledTable1.UseVisualStyleBackColor = false;
             // 
             // angledTable2
             // 
             angledTable2.BackColor = Color.Green;
-            angledTable2.Location = new Point(395, 595);
+            angledTable2.Location = new Point(378, 546);
             angledTable2.Name = "angledTable2";
-            angledTable2.Size = new Size(28, 24);
+            angledTable2.Size = new Size(39, 28);
             angledTable2.TabIndex = 9;
             angledTable2.UseVisualStyleBackColor = false;
             // 
             // angledTable3
             // 
             angledTable3.BackColor = Color.Green;
-            angledTable3.Location = new Point(337, 672);
+            angledTable3.Location = new Point(322, 612);
             angledTable3.Name = "angledTable3";
-            angledTable3.Size = new Size(30, 24);
+            angledTable3.Size = new Size(42, 28);
             angledTable3.TabIndex = 10;
             angledTable3.UseVisualStyleBackColor = false;
             // 
             // sideTable2
             // 
             sideTable2.BackColor = Color.Green;
-            sideTable2.Location = new Point(103, 342);
+            sideTable2.Location = new Point(116, 309);
             sideTable2.Name = "sideTable2";
             sideTable2.Size = new Size(33, 58);
             sideTable2.TabIndex = 11;
@@ -160,7 +160,7 @@
             // sideTable3
             // 
             sideTable3.BackColor = Color.Green;
-            sideTable3.Location = new Point(103, 445);
+            sideTable3.Location = new Point(117, 406);
             sideTable3.Name = "sideTable3";
             sideTable3.Size = new Size(33, 65);
             sideTable3.TabIndex = 12;
@@ -169,7 +169,7 @@
             // sideTable4
             // 
             sideTable4.BackColor = Color.Green;
-            sideTable4.Location = new Point(103, 578);
+            sideTable4.Location = new Point(117, 528);
             sideTable4.Name = "sideTable4";
             sideTable4.Size = new Size(33, 58);
             sideTable4.TabIndex = 13;
@@ -178,7 +178,7 @@
             // middleTable10
             // 
             middleTable10.BackColor = Color.Green;
-            middleTable10.Location = new Point(321, 473);
+            middleTable10.Location = new Point(314, 440);
             middleTable10.Name = "middleTable10";
             middleTable10.Size = new Size(59, 31);
             middleTable10.TabIndex = 14;
@@ -187,7 +187,7 @@
             // middleTable7
             // 
             middleTable7.BackColor = Color.Green;
-            middleTable7.Location = new Point(183, 528);
+            middleTable7.Location = new Point(188, 483);
             middleTable7.Name = "middleTable7";
             middleTable7.Size = new Size(33, 34);
             middleTable7.TabIndex = 15;
@@ -196,7 +196,7 @@
             // middleTable9
             // 
             middleTable9.BackColor = Color.Green;
-            middleTable9.Location = new Point(197, 678);
+            middleTable9.Location = new Point(201, 623);
             middleTable9.Name = "middleTable9";
             middleTable9.Size = new Size(59, 34);
             middleTable9.TabIndex = 16;
@@ -223,7 +223,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.BackgroundTables;
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(614, 741);
+            ClientSize = new Size(611, 741);
             Controls.Add(comboBoxTime);
             Controls.Add(dateTimePicker1);
             Controls.Add(middleTable9);
@@ -247,8 +247,8 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
-            MaximumSize = new Size(630, 780);
-            MinimumSize = new Size(630, 726);
+            MaximumSize = new Size(627, 780);
+            MinimumSize = new Size(627, 726);
             Name = "PickTableWindow";
             Text = "KlodMone";
             ResumeLayout(false);

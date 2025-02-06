@@ -75,7 +75,7 @@
             // reserveButton
             // 
             reserveButton.BackColor = Color.FromArgb(0, 64, 64);
-            reserveButton.Font = new Font("Gabriola", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            reserveButton.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             reserveButton.ForeColor = Color.PaleTurquoise;
             reserveButton.Location = new Point(46, 423);
             reserveButton.Margin = new Padding(3, 2, 3, 2);
@@ -89,55 +89,55 @@
             // headerLabel
             // 
             headerLabel.AutoSize = true;
-            headerLabel.Font = new Font("Gabriola", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            headerLabel.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             headerLabel.ForeColor = Color.FromArgb(0, 64, 64);
-            headerLabel.Location = new Point(44, 17);
+            headerLabel.Location = new Point(43, 19);
             headerLabel.Name = "headerLabel";
-            headerLabel.Size = new Size(296, 50);
+            headerLabel.Size = new Size(344, 35);
             headerLabel.TabIndex = 5;
             headerLabel.Text = "БРОНИРОВАНИЕ СТОЛИКА";
             // 
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Font = new Font("Gabriola", 15.75F, FontStyle.Bold);
+            nameLabel.Font = new Font("Comic Sans MS", 15.75F);
             nameLabel.ForeColor = Color.FromArgb(0, 64, 64);
-            nameLabel.Location = new Point(47, 67);
+            nameLabel.Location = new Point(43, 67);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(119, 39);
+            nameLabel.Size = new Size(142, 29);
             nameLabel.TabIndex = 6;
             nameLabel.Text = "Введите Имя";
             // 
             // timeLabel
             // 
             timeLabel.AutoSize = true;
-            timeLabel.Font = new Font("Gabriola", 15.75F, FontStyle.Bold);
+            timeLabel.Font = new Font("Comic Sans MS", 15.75F);
             timeLabel.ForeColor = Color.FromArgb(0, 64, 64);
-            timeLabel.Location = new Point(43, 134);
+            timeLabel.Location = new Point(43, 132);
             timeLabel.Name = "timeLabel";
-            timeLabel.Size = new Size(144, 39);
+            timeLabel.Size = new Size(175, 29);
             timeLabel.TabIndex = 7;
             timeLabel.Text = "Выберите время";
             // 
             // dateLabel
             // 
             dateLabel.AutoSize = true;
-            dateLabel.Font = new Font("Gabriola", 15.75F, FontStyle.Bold);
+            dateLabel.Font = new Font("Comic Sans MS", 15.75F);
             dateLabel.ForeColor = Color.FromArgb(0, 64, 64);
             dateLabel.Location = new Point(44, 203);
             dateLabel.Name = "dateLabel";
-            dateLabel.Size = new Size(138, 39);
+            dateLabel.Size = new Size(160, 29);
             dateLabel.TabIndex = 8;
             dateLabel.Text = "Выберите дату";
             // 
             // peopleAmountLabel
             // 
             peopleAmountLabel.AutoSize = true;
-            peopleAmountLabel.Font = new Font("Gabriola", 15.75F, FontStyle.Bold);
+            peopleAmountLabel.Font = new Font("Comic Sans MS", 15.75F);
             peopleAmountLabel.ForeColor = Color.FromArgb(0, 64, 64);
             peopleAmountLabel.Location = new Point(43, 280);
             peopleAmountLabel.Name = "peopleAmountLabel";
-            peopleAmountLabel.Size = new Size(203, 39);
+            peopleAmountLabel.Size = new Size(261, 29);
             peopleAmountLabel.TabIndex = 9;
             peopleAmountLabel.Text = "Выберите кол-во персон";
             // 
@@ -153,11 +153,11 @@
             // phoneLabel
             // 
             phoneLabel.AutoSize = true;
-            phoneLabel.Font = new Font("Gabriola", 15.75F, FontStyle.Bold);
+            phoneLabel.Font = new Font("Comic Sans MS", 15.75F);
             phoneLabel.ForeColor = Color.FromArgb(0, 64, 64);
             phoneLabel.Location = new Point(44, 345);
             phoneLabel.Name = "phoneLabel";
-            phoneLabel.Size = new Size(210, 39);
+            phoneLabel.Size = new Size(265, 29);
             phoneLabel.TabIndex = 11;
             phoneLabel.Text = "Введите номер телефона";
             // 
